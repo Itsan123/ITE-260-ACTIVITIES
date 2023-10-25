@@ -1,0 +1,106 @@
+1. Create a program that will display 10 to 1 using a while loop.
+======================================================================
+number = 10
+while number > 0:
+    print(number)
+    number -= 1
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+======================================================================
+2. Create a program that accepts 5 integers then computes for the sum.
+======================================================================
+num1 = int(input("Enter Number1: "))
+num2 = int(input("Enter Number2: "))
+num3 = int(input("Enter Number3: "))
+num4 = int(input("Enter Number4: "))
+num5 = int(input("Enter Number5: "))
+Sum = num1 + num2 + num3 + num4 + num5
+print(Sum)
+Enter Number1: 1
+Enter Number2: 2
+Enter Number3: 3
+Enter Number4: 4
+Enter Number5: 5
+15
+======================================================================
+3.
+Objective: Create a while loop that counts from 1 to a specified number and prints each number.
+Instructions:Ask the user to input a number.Use a while loop to count from 1 to the specified number.Inside the loop, print each number.Continue counting and printing until you reach the specified number.
+
+======================================================================
+userinput = int(input("Enter specified number: "))
+attempt = 1
+while attempt <= userinput:
+    print(attempt)
+    attempt += 1 
+Enter specified Number: 9
+1
+2
+3
+4
+5
+6
+7
+8
+9
+> 
+
+======================================================================
+4. 
+Objective: Use a while loop to print a message a specified number of times.
+Instructions:Ask the user to input a message and the number of times they want it to be printed.Use a while loop to print the message the specified number of times.Increment a counter variable in each iteration to keep track of how many times the message has been printed.
+Exit the loop when the counter reaches the specified number.
+
+======================================================================
+message = input("Enter Message:")
+userinput = int(input("Enter specified number: "))
+attempt = 1
+while attempt <= userinput:
+    print(message,attempt)
+    attempt += 1 
+
+Enter specified Number: 9
+Aigo 1 
+Aigo 2 
+Aigo 3 
+Aigo 4 
+Aigo 5
+Aigo 6
+Aigo 7
+Aigo 8 
+Aigo 9
+> 
+======================================================================
+5.
+Objective: Create a simple word guessing game using a while loop.
+Instructions:Choose a secret word and store it in a variable.Ask the player to guess the secret word.Use a while loop to repeatedly ask the player for their guess until they guess the correct word.Inside the loop, compare the player's guess to the secret word.
+If the guess is incorrect, print a message like "Try again."
+If the guess is correct, print a message like "Congratulations! You guessed the secret word!" and exit the loop.
+======================================================================
+secretword = str(input("Register secret word: "))
+attempts = 3
+
+while attempts > 0:
+    enterguess = str(input("Enter Guess: "))
+    if enterguess != secretword:
+        print("Try again.")
+        attempts -= 1
+    elif enterguess == secretword:
+        print("Congratulations! You guessed the secret word!")
+        break
+Register secret word: 
+Aigo
+Enter Guess: 
+gwechana
+Try again.
+Enter Guess: 
+Aigo
+Congratulations! You guessed the secret word!

@@ -1,0 +1,63 @@
+(1)
+num = int(input("Enter number: "))
+
+if num > 3:
+   print("Positive")
+
+else:
+   print("Negative")
+
+>
+Enter number: 4
+Positive
+
+Enter number: 2
+Negative
+
+
+(2)
+Name = input("Enter Name: ")
+sub1 = float(input("Enter Subject 1 Grade: "))
+sub2 = float(input("Enter Subject 2 Grade: "))
+sub3 = float(input("Enter Subject 3 Grade: "))
+sub4 = float(input("Enter Subject 4 Grade: "))
+sub5 = float(input("Enter Subject 5 Grade: "))
+Avg = (sub1 + sub2 + sub3 + sub4 + sub5)/5
+if Avg > 85:
+   print(Name + " " + "Average:" + " " + str(Avg), "HIGHEST HONOR")
+elif Avg > 80:
+   print(Name + " " + "Average:" + " " + str(Avg),"WITH HONOR")
+elif Avg > 75:
+   print(Name + " " + "Average:" + " " + str(Avg),"PASSED")
+else:
+   print(Name + " " + "Average:" + " " + str(Avg),"FAILED")
+
+>
+Enter Name: Ethan
+Enter Subject 1 Grade: 89
+Enter Subject 2 Grade: 89
+Enter Subject 3 Grade: 89
+Enter Subject 4 Grade: 89
+Enter Subject 5 Grade: 89
+Ethan Average: 89.0 HIGHEST HONOR
+
+
+(3)
+username = "Arlalou123"
+password = "secret"
+
+user = input("Enter Username: ")
+pass1 = input("Enter Password: ")
+
+if user == username:
+   print("LOGIN")
+
+elif pass1 == password:
+    print("LOGIN")
+else:
+    print("WRONG PASSWORD")
+
+>
+Enter Username: Arlalou123
+Enter Password: secret
+LOGIN

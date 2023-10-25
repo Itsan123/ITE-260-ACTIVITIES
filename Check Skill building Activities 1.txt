@@ -1,0 +1,39 @@
+(1)
+name = input("Enter Name: ")
+age = int(input("Enter Age: "))
+
+print("Please share the information asked for:\n")
+
+>
+Enter Name: Nina
+Enter Age: 34
+Please share the information asked for:
+
+
+
+
+(2)
+FirstNumber = int(input("Enter First Number: "))
+SecondNumber = int(input("Enter Second Number: "))
+
+sum = FirstNumber + SecondNumber
+
+print(sum)
+
+>
+Enter First Number: 69
+Enter Second Number: 87
+156
+
+
+
+(3)
+Brands = ["Toyota","Mazda","Lambo","Suzuki","Tesla"]
+
+Brands.insert (4,"Porche")
+Brands.pop(2)
+
+print(Brands)
+
+>
+['Toyota', 'Mazda', 'Suzuki', 'Porche', 'Tesla']

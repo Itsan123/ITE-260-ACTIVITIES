@@ -1,0 +1,45 @@
+(1)
+Brands = ["Honda","Ferrari","Toyota","BMW","Porsche"]
+Brands.append("Tesla")
+Brands.append("Ford")
+Brands.append("Bentley")
+
+
+print(Brands)
+
+= ['Honda', 'Ferrari', 'Toyota', 'BMW', 'Porsche', 'Tesla', 'Ford', 'Bentley']
+
+
+
+(2)
+Brands = ["Kwasaki","Suzuki","Honda","BMW","KTM"]
+Brands.insert (3,"Ducati") 
+Brands.pop(4)
+
+print(Brands)
+
+= ['Kwasaki', 'Suzuki', 'Honda', 'Ducati', 'KTM']
+
+
+
+(3)
+Types = ["Apple","Mango","Avocado","Grape","Orange"]
+Types [4] = "Cherries"
+
+print(Types)
+
+= ['Apple', 'Mango', 'Avocado', 'Grape', 'Cherries']
+
+
+
+
+
+(4)
+Animals = ["Dog","Cat","Monkey","Parrot","Elephant"]
+Animals.pop(4) 
+
+print(Animals)
+
+= ['Dog', 'Cat', 'Monkey', 'Parrot']
+
+

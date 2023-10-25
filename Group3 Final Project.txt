@@ -1,0 +1,79 @@
+import random
+
+
+briefcase_values = [0.01, 1, 5, 10, 25, 50, 75, 100, 200, 300, 400, 500, 750, 1000, 5000, 10000, 25000, 50000, 75000,
+                    100000, 200000, 300000, 400000, 500000, 750000, 1000000]
+
+def game():
+    cases = list(range(1, 27))
+    random.shuffle(cases)
+    player_case = select_case()
+
+    print("Welcome to Deal or No Deal!")
+    print("Choose your case (1-26) or type 'quit' to exit.")
+
+    while True:
+        try:
+            user_input = input("Select a case: ")
+            if user_input == "quit":
+                print("You've quit the game. Your case had $" + str(briefcase_values[player_case - 1]) + " in it.")
+                break
+            choice = int(user_input)
+            if choice < 1 or choice > 26:
+                print("Invalid choice. Please select a case between 1 and 26.")
+            elif choice in cases:
+                cases.remove(choice)
+                print(f"You've selected case {choice}.")
+                break
+            else:
+                print("That case has already been selected. Please choose another.")
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 26 or 'quit'.")
+
+    Rounds = 1
+    rounds = [4, 3, 2, 1]
+    for round_num in rounds:
+        print(f"\nRound {Rounds}: Choose {round_num} cases to open.")
+        Rounds += 1
+        for _ in range(round_num):
+            while True:
+                try:
+                    open_case = int(input("Open a case: "))
+                    if open_case in cases:
+                        cases.remove(open_case)
+                        print(f"You've opened case {open_case} with ${briefcase_values[open_case - 0]:.2f}.")
+                        break
+                    else:
+                        print("Invalid choice. Please select a case that hasn't been opened.")
+                except ValueError:
+                    print("Invalid input. Please enter the number of an unopened case.")
+
+        banker_offer = sum(briefcase_values) // (27 - Rounds)
+        print(f"\nThe banker offers you ${banker_offer} to quit the game. Deal or No Deal?")
+        decision = input("Type 'deal' to accept or 'no deal' to continue: ")
+        if decision.lower() == "deal":
+            print(
+                f"Congratulations! You won ${banker_offer}. Your original case had ${briefcase_values[player_case - 1]:.2f}.")
+            break
+        elif Rounds == 1:
+            print(f"Congratulations! You won ${briefcase_values[player_case - 1]:.2f}.")
+        else:
+            print("No deal! Let's continue.")
+def select_case():
+    return random.randint(1, 26)
+
+def main():
+    while True:
+        plya = input("Press S to start --- Press P to play again --- press Q to quit: ")
+        if plya.lower() == 's':
+            game()
+        elif plya.lower() == 'p':
+            game()
+        elif plya.lower() == 'q':
+            print ("Goodbye cunt, thank you for playing!")
+            break
+        else:
+            print ("Please input a correct letter")
+            continue
+if __name__ == "__main__":
+    main()
